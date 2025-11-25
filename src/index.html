@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Color Palette Picker</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <main class="app-container">
+
+    <!-- Header -->
+    <header class="app-header">
+      <h1>Color Palette Picker</h1>
+      <p>Build beautiful palettes • Name your colors • Export instantly</p>
+    </header>
+
+    <!-- Color Input Section -->
+    <section class="color-input-card">
+      <div class="color-preview">
+        <input type="color" id="colorPicker" value="#6366f1" aria-label="Pick a color" />
+        <span id="currentHex">#6366F1</span>
+      </div>
+
+      <div class="input-fields">
+        <label for="colorName">
+          <span>Color Name</span>
+          <input
+            type="text"
+            id="colorName"
+            placeholder="e.g. primary, accent-blue, background-dark"
+            maxlength="32"
+            autocomplete="off"
+          />
+        </label>
+
+        <label for="hexInput">
+          <span>Hex Value</span>
+          <input
+            type="text"
+            id="hexInput"
+            value="#6366F1"
+            placeholder="#6366F1"
+            maxlength="7"
+          />
+        </label>
+      </div>
+
+      <button id="addColorBtn" class="add-button">
+        <span>Add to Palette</span>
+      </button>
+    </section>
+
+    <!-- Palette Grid -->
+    <section class="palette-section" aria-label="Your color palette">
+      <div id="paletteGrid" class="palette-grid">
+        <!-- Palette cards will be injected here by JavaScript -->
+      </div>
+
+      <p id="emptyState" class="empty-state">
+        No colors yet. Pick a color and click “Add to Palette” to begin.
+      </p>
+    </section>
+
+    <!-- Footer with Export -->
+    <footer class="app-footer">
+      <div class="palette-summary">
+        <span id="colorCount">0</span> colors in palette
+      </div>
+
+      <button id="exportBtn" class="export-button" disabled>
+        Export Palette
+      </button>
+
+      <div id="exportDropdown" class="export-dropdown hidden" role="menu">
+        <button data-format="css" role="menuitem">CSS Variables</button>
+        <button data-format="scss" role="menuitem">SCSS Map</button>
+        <button data-format="json" role="menuitem">JSON</button>
+      </div>
+    </footer>
+  </main>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
