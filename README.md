@@ -30,7 +30,7 @@ Live Demo: https://your-username.github.io/color-palette-picker
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/your-username/color-palette-picker.git
+git clone [https://github.com/your-username/color-palette-picker.git](https://github.com/AdityaKarippadathUdai/color-palette)
 
 # 2. Open the src folder
 cd color-palette-picker/src
